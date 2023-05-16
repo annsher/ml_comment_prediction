@@ -1,31 +1,76 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <meta charset="UTF-8">
-  
-  <!-- Make it compatible to mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+<meta charset="UTF-8">
+  <style>
+    body {
+    background-image: url('https://wallpapercave.com/wp/wp7920288.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    div {
+      text-align: center;
+      font-family:system-ui;
+      padding-top: 100px;
+      }
+    h1 {
+      padding-bottom: 25px;
+      font-size: 150px;
+      }
+   input[type=text] {
+      width: 600px;
+      height: 150px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 1px solid #000000;
+      border-radius: 2px;
+      background-color: #f8f8f8;
+      font-size: 150px;
+      }
+    textarea {
+      width: 2000px;
+      height: 800px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 1px solid #223E54;
+      border-radius: 2px;
+      background-color: #f8f8f8;
+      font-size: 70px;
+     }
+    button[type=submit] {
+      background-color: #3E6F94;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      margin: 25px;
+      cursor: pointer;
+      box-sizing: border-box;
+      border: 1px solid #223E54;
+      border-radius: 2px;
+      font-size: 56px;
+    }
+   h2 {
+      font-size: 100px;
+      }
+    button[type=submit]:hover {background-color: #628AA9;}
+   </style>  
   <title>Классификация комментариев</title>
-  
 </head>
 
-<body style="background: #000;">
+<body >
  <div class="login">
-	<h1 style="color:Violet;">Классификация комментариев</h1>
-
-     <!-- Action is where the data is sent. In our case, predict page.
-     If action is omitted, it assumed to be the current page -->
+	<h1 style="color:white;">Классификация комментариев</h1>
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Комментарий" placeholder="Комментарий" required="required" /><br>
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Вид комментария</button></p>
+    <textarea rows = "10" cols = "60" name="Комментарий" placeholder="Комментарий..." required="required">
+        </textarea><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Предсказать</button></p>
     </form>
 
    <br>
    <br>
-   <h4 style="color:Violet;">
-   {{ prediction_text }} </h4>
+   <h2 style="color:white;">
+   {{ prediction_text }} </h2>
 
  </div>
 
