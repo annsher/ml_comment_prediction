@@ -18,20 +18,9 @@
       padding-bottom: 25px;
       font-size: 150px;
       }
-   input[type=text] {
-      width: 600px;
-      height: 150px;
-      padding: 12px 20px;
-      box-sizing: border-box;
-      border: 1px solid #000000;
-      border-radius: 2px;
-      background-color: #f8f8f8;
-      font-size: 150px;
-      }
     textarea {
       width: 2000px;
       height: 800px;
-      padding: 12px 20px;
       box-sizing: border-box;
       border: 1px solid #223E54;
       border-radius: 2px;
@@ -53,8 +42,8 @@
    h2 {
       font-size: 100px;
       }
-    button[type=submit]:hover {background-color: #628AA9;}
-   </style>  
+ button[type=submit]:hover {background-color: #628AA9;}
+   </style> 
   <title>Классификация комментариев</title>
 </head>
 
@@ -62,8 +51,8 @@
  <div class="login">
 	<h1 style="color:white;">Классификация комментариев</h1>
     <form action="{{ url_for('predict')}}"method="post">
-    <textarea rows = "10" cols = "60" name="Комментарий" placeholder="Комментарий..." required="required">
-        </textarea><br>
+    <textarea rows = "10" cols = "60" name="Комментарий" placeholder="Комментарий..." required="required"></textarea>
+<br>
         <button type="submit" class="btn btn-primary btn-block btn-large">Предсказать</button></p>
     </form>
 
